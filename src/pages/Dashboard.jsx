@@ -16,7 +16,6 @@ export default function Dashboard() {
     return (
         <div className="space-y-8">
 
-            {/* Welcome Section */}
             <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800">
                 <h1 className="text-2xl font-bold text-white">
                     Welcome back, {user?.name} 👋
@@ -29,7 +28,6 @@ export default function Dashboard() {
                 </p>
             </div>
 
-            {/* Stats */}
             <div className="grid md:grid-cols-3 gap-6">
 
                 <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800">
@@ -55,7 +53,6 @@ export default function Dashboard() {
 
             </div>
 
-            {/* Quick Actions */}
             <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800">
                 <h2 className="text-white font-semibold mb-4">
                     Quick Actions

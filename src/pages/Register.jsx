@@ -9,8 +9,6 @@ export default function Register() {
     const handleRegister = (e) => {
         e.preventDefault();
 
-        // Saving to localStorage as our Mock DB
-
         localStorage.setItem('registered_user', JSON.stringify(formData));
         alert("Registration Successful! Please Login.");
         navigate('/login');

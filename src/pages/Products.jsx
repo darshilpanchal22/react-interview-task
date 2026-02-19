@@ -17,7 +17,6 @@ export default function Products() {
             });
     }, []);
 
-    // ✅ Filter logic
     const filteredProducts = products.filter(product =>
         product.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -35,7 +34,6 @@ export default function Products() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <h1 className="text-2xl font-bold text-white">Product Catalog</h1>
 
-                {/* 🔍 Search Input */}
                 <div className="relative">
                     <Search className="absolute left-3 top-2.5 text-slate-500" size={18} />
                     <input
@@ -47,7 +45,6 @@ export default function Products() {
                 </div>
             </div>
 
-            {/* 🛍 Products Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {filteredProducts.length > 0 ? (
                     filteredProducts.map(product => (
