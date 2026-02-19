@@ -7,6 +7,7 @@ import Register from './pages/Register';
 import Products from './pages/Products';
 import Cart from './pages/Cart';
 import Profile from './pages/Profile';
+import Dashboard from "./pages/Dashboard";
 
 const Protected = ({ children }) => {
   const { user } = useAuth();
@@ -21,7 +22,7 @@ export default function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/dashboard" element={<Protected><div className="bg-[#1e293b] p-10 rounded-2xl border border-slate-800 text-slate-400 text-center">Dashboard Analytics Placeholder</div></Protected>} />
+            <Route path="/dashboard" element={<Protected><Dashboard /></Protected>} />
             <Route path="/products" element={<Protected><Products /></Protected>} />
             <Route path="/cart" element={<Protected><Cart /></Protected>} />
             <Route path="/profile" element={<Protected><Profile /></Protected>} />

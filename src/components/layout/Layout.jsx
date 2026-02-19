@@ -18,7 +18,7 @@ export default function Layout({ children }) {
 
     return (
         <div className="flex min-h-screen bg-[#0f172a]">
-            {/* Sidebar */}
+
             <aside className="w-64 border-r border-slate-800 flex flex-col p-6 fixed h-full bg-[#0f172a]">
                 <div className="flex items-center gap-3 mb-10">
                     <div className="bg-blue-600 p-2 rounded-lg text-white"><ShoppingBag size={20} /></div>
@@ -47,18 +47,18 @@ export default function Layout({ children }) {
                     <LogOut size={20} /> Sign Out
                 </button>
             </aside>
-
+            ``
             {/* Main Content */}
-            <main className="flex-1 ml-64 p-10">
+            <main className="flex-1 ml-64 p-10 bg-[#0F172A]">
                 <header className="flex justify-between items-center mb-10">
                     <div>
                         <h2 className="text-3xl font-bold text-white">Hello, {user?.name}! 👋</h2>
-                        <p className="text-slate-500 text-sm">Welcome back to your store dash.</p>
+                        <p className="text-slate-500 text-sm">Welcome back to your store</p>
                     </div>
-                    <div className="flex items-center gap-4 bg-[#1e293b] p-2 pr-4 rounded-full border border-slate-700">
-                        <img src={`https://api.dicebear.com/7.x/initials/svg?seed=${user?.name}`} className="w-10 h-10 rounded-full" />
+                    {/* <div className="flex items-center gap-2 bg-[#1e293b] p-2 pr-4 rounded-full border border-slate-700">
+                        <img src={`https://api.dicebear.com/7.x/initials/svg?seed=${user?.name}`} className="w-12 h-8 rounded-full" />
                         <div className="text-sm font-bold text-white leading-none">{user?.name}</div>
-                    </div>
+                    </div> */}
                 </header>
                 {children}
             </main>
