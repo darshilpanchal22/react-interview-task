@@ -48,8 +48,7 @@ export default function Layout({ children }) {
                 </button>
             </aside>
             ``
-            {/* Main Content */}
-            <main className="flex-1 ml-64 p-10 bg-[#0F172A]">
+            <main className="flex-1 ml-64 p-10 w-full bg-[#0F172A]">
                 <header className="flex justify-between items-center mb-10">
                     <div>
                         <h2 className="text-3xl font-bold text-white">Hello, {user?.name}! 👋</h2>

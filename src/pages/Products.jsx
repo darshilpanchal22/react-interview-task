@@ -4,7 +4,7 @@ import { Star, ShoppingCart, Search } from 'lucide-react';
 
 export default function Products() {
     const [products, setProducts] = useState([]);
-    const [searchTerm, setSearchTerm] = useState(""); // ✅ search state
+    const [searchTerm, setSearchTerm] = useState(""); 
     const [loading, setLoading] = useState(true);
     const { addToCart } = useCart();
 
