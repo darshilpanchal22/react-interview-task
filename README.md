@@ -1,16 +1,24 @@
-# React + Vite
+⚙️ Technical Implementation Details
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Session Management Logic
+   The application uses a "Heartbeat" mechanism within the AuthContext. A setInterval checks the session_expiry timestamp in localStorage every second. If Date.now() exceeds the limit, the logout() function is triggered globally.
 
-Currently, two official plugins are available:
+2. Component Composition
+   To maintain DRY (Don't Repeat Yourself) principles, a Layout.jsx component wraps all protected views. This ensures the Sidebar and Header are only rendered once, while the Outlet from react-router-dom handles dynamic page content.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. State Management Strategy
+   I chose the Context API over Redux Toolkit for this specific task to demonstrate proficiency with native React hooks (useContext, useEffect). This approach provides a lightweight yet powerful solution for managing shared state across the dashboard without external library bloat.
 
-## React Compiler
+🛠️ How to Run
+Clone the repository:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install dependencies:
 
-## Expanding the ESLint configuration
+Start the development server:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧼 Code Quality Guidelines
+Reusable Components: UI elements are broken down into small, manageable pieces.
+
+Separation of Concerns: Business logic (Context) is separated from UI (Components).
+
+Responsive Design: Mobile-first approach using Tailwind's utility classes.
